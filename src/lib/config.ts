@@ -26,7 +26,9 @@ export const siteConfig = {
   address: process.env.NEXT_PUBLIC_ADDRESS || null,
   addressEn: process.env.NEXT_PUBLIC_ADDRESS_EN || null,
   website: process.env.NEXT_PUBLIC_WEBSITE || null,
-  socials: parseJSON<SocialItem[]>(process.env.NEXT_PUBLIC_SOCIALS, []),
+  socials: parseJSON<SocialItem[]>(process.env.NEXT_PUBLIC_SOCIALS, [
+  { platform: 'youtube', url: '' }
+]),
   avatarUrl: process.env.NEXT_PUBLIC_AVATAR_URL || `${_basePath}/images/1775091183236-upload.webp`,
   accentColor: process.env.NEXT_PUBLIC_ACCENT_COLOR || '#3b82f6',
   designPreset: parsePreset(process.env.NEXT_PUBLIC_DESIGN_PRESET || 'pro'),
